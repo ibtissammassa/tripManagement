@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: TripManagementSystem
+  datasource:
+    url: jdbc:postgresql://localhost:5432/trip_management
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: changemeinprod!
+  jpa:
+    hibernate:
+      ddl-auto: update
+
