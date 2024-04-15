@@ -19,10 +19,10 @@ public class VehicleEntity {
     private Long id;
     private String brand;
     private String model;
-    private VehicleType vehicleType;
+    private String vehicleType;
     private Long mileage;
     private Boolean available;
-    private DriversLicenceType requiredLicenceType;
+    private String requiredLicenceType;
     private String specialEquipments;
     @OneToOne
     @JoinColumn(name = "registrationNumber")
