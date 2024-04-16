@@ -13,10 +13,10 @@ public class VehicleDto {
     private Long id;
     private String brand;
     private String model;
-    private VehicleType vehicleType;
+    private String vehicleType;
     private Long mileage;
     private Boolean available;
-    private DriversLicenceType requiredLicenceType;
-    private String[] specialEquipments;
+    private String requiredLicenceType;
+    private String specialEquipments;
     private GrayCardDto grayCard;
 }

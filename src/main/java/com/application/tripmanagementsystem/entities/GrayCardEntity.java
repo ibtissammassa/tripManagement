@@ -1,8 +1,6 @@
 package com.application.tripmanagementsystem.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +16,7 @@ import java.sql.Date;
 @Table(name = "gray_cards")
 public class GrayCardEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String registrationNumber;
     private String interiorRegistration;
     private Date firstUsageDate;
