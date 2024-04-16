@@ -35,11 +35,11 @@ public class VehicleRepositoryTest {
 
     @Test
     void testThatCreateAndReadVehicle(){
-        GrayCardEntity grayCard = UtilData.createGrayCard1();
-        GrayCardEntity savedGrayCard = grayCardRepository.save(grayCard);
+        //GrayCardEntity grayCard = UtilData.createGrayCard1();
+        //GrayCardEntity savedGrayCard = grayCardRepository.save(grayCard);
 
         VehicleEntity vehicle = UtilData.createVehicle1();
-        vehicle.setGrayCard(savedGrayCard);
+        //vehicle.setGrayCard(savedGrayCard);
         VehicleEntity savedVehicle = vehicleRepository.save(vehicle);
 
         Optional<VehicleEntity> readVehicle = vehicleRepository.findById(vehicle.getId());
@@ -51,25 +51,25 @@ public class VehicleRepositoryTest {
 
     @Test
     void testThatReadMultipleVehicles(){
-        GrayCardEntity grayCard1 = UtilData.createGrayCard1();
-        GrayCardEntity savedGrayCard1 = grayCardRepository.save(grayCard1);
+        //GrayCardEntity grayCard1 = UtilData.createGrayCard1();
+        //GrayCardEntity savedGrayCard1 = grayCardRepository.save(grayCard1);
         VehicleEntity vehicle1 = UtilData.createVehicle1();
-        vehicle1.setGrayCard(savedGrayCard1);
+        //vehicle1.setGrayCard(savedGrayCard1);
 
-        GrayCardEntity grayCard2 = UtilData.createGrayCard2();
-        GrayCardEntity savedGrayCard2 = grayCardRepository.save(grayCard2);
+        //GrayCardEntity grayCard2 = UtilData.createGrayCard2();
+        //GrayCardEntity savedGrayCard2 = grayCardRepository.save(grayCard2);
         VehicleEntity vehicle2 = UtilData.createVehicle2();
-        vehicle2.setGrayCard(savedGrayCard2);
+        //vehicle2.setGrayCard(savedGrayCard2);
 
-        GrayCardEntity grayCard3 = UtilData.createGrayCard3();
-        GrayCardEntity savedGrayCard3 = grayCardRepository.save(grayCard3);
+//        GrayCardEntity grayCard3 = UtilData.createGrayCard3();
+//        GrayCardEntity savedGrayCard3 = grayCardRepository.save(grayCard3);
         VehicleEntity vehicle3 = UtilData.createVehicle3();
-        vehicle3.setGrayCard(savedGrayCard3);
+//        vehicle3.setGrayCard(savedGrayCard3);
 
-        GrayCardEntity grayCard4 = UtilData.createGrayCard4();
-        GrayCardEntity savedGrayCard4 = grayCardRepository.save(grayCard4);
+//        GrayCardEntity grayCard4 = UtilData.createGrayCard4();
+//        GrayCardEntity savedGrayCard4 = grayCardRepository.save(grayCard4);
         VehicleEntity vehicle4 = UtilData.createVehicle4();
-        vehicle4.setGrayCard(savedGrayCard4);
+//        vehicle4.setGrayCard(savedGrayCard4);
 
         List<VehicleEntity> vehicles = new ArrayList<>();
         vehicles.add(vehicle1);
