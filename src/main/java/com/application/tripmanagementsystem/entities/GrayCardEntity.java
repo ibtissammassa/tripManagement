@@ -16,7 +16,6 @@ import java.sql.Date;
 @Table(name = "gray_cards")
 public class GrayCardEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String registrationNumber;
     private String interiorRegistration;
     private Date firstUsageDate;

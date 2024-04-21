@@ -10,3 +10,9 @@ spring:
     hibernate:
       ddl-auto: update
 
+# Logging configuration
+logging:
+  level:
+    root: INFO # Set the root logging level to INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
