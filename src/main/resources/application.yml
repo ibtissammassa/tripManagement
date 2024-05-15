@@ -8,7 +8,7 @@ spring:
     password: changemeinprod!
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
 
 # Logging configuration
 logging:

@@ -52,20 +52,7 @@ public class VehicleController {
         boolean vehicleExists = vehicleService.isExist(id);
         VehicleEntity vehicleEntity = vehicleMapper.mapFrom(vehicleDto);
 
-        // If the gray card doesn't exist we create a new one
-        if (vehicleEntity.getGrayCard() != null) {
-            System.out.println("gray card not null");
-            GrayCardEntity grayCardEntity = vehicleEntity.getGrayCard();
-            if (!grayCardService.existsById(grayCardEntity.getRegistrationNumber())) {
-                // Ensure registration number is not null or empty before creating
-                if (grayCardEntity.getRegistrationNumber() != null && !grayCardEntity.getRegistrationNumber().isEmpty()) {
-                    GrayCardEntity newGrayCard = grayCardService.createGrayCard(grayCardEntity, grayCardEntity.getRegistrationNumber());
-                    vehicleEntity.setGrayCard(newGrayCard);
-                } else {
-                    System.out.println("Warning: Gray card registration number is null or empty.");
-                }
-            }
-        }
+
 
         VehicleEntity savedVehicle = vehicleService.createUpdateVehicle(vehicleEntity,id);
         VehicleDto savedVehicleDto = vehicleMapper.mapTo(savedVehicle);
@@ -74,7 +61,7 @@ public class VehicleController {
         if(vehicleExists){
             System.out.println("Vehicle updated successfully.");
             return new ResponseEntity<>(savedVehicleDto,HttpStatus.OK);
-        }else{
+        } else{
             System.out.println("Vehicle created successfully.");
             return new ResponseEntity<>(HttpStatus.CREATED);
         }

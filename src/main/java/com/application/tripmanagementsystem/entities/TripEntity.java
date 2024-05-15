@@ -18,12 +18,20 @@ import java.sql.Date;
 public class TripEntity {
     @Id
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "driver_id")
+    private DriverEntity driver;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "vehicle_id")
+    private VehicleEntity vehicle;
+
     private Date departureDate;
     private Date arrivalDate;
     private String departure;
     private String destination;
-    @Enumerated(EnumType.STRING)
-    private VehicleType requiredVehicleType;
+    private String requiredVehicleType;
     private Integer passengersNum;
     private String otherDetails;
 }

@@ -45,7 +45,7 @@ public class DriverController {
         Optional<DriverEntity> result = driverService.findDriver(registrationsNum);
         if (result.isPresent()){
             DriverDto driverDto = driverMapper.mapTo(result.get());
-            return new ResponseEntity<>(driverDto, HttpStatus.FOUND);
+            return new ResponseEntity<>(driverDto, HttpStatus.OK);
         }else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
